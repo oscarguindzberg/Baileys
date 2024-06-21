@@ -163,6 +163,19 @@ export const decryptMessageNode = (
 								ciphertext: content
 							})
 							break
+						case 'msmsg':
+							//I don't know what to do here
+							console.log("Received msmsg")
+							console.log("stanza ", stanza)
+							console.log("meId ", meId)
+							console.log("meLid ", meLid)
+							console.log("fullMessage ", fullMessage)
+							console.log("author ", author)
+							console.log("sender ", sender)
+							console.log("tag ", tag)
+							console.log("attrs ", attrs)
+							console.log("content ", content)
+							throw new Error(`Throwing exception until I finish implementing msmsg`)
 						default:
 							throw new Error(`Unknown e2e type: ${e2eType}`)
 						}
