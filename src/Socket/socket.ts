@@ -719,7 +719,9 @@ export const makeSocket = (config: SocketConfig) => {
 			logger.debug({ name }, 'updated pushName')
 			sendNode({
 				tag: 'presence',
-				attrs: { name: name! }
+				attrs: { name: name!
+				       , type: 'unavailable'
+				},
 			})
 				.catch(err => {
 					logger.warn({ trace: err.stack }, 'error in sending presence update on name change')
